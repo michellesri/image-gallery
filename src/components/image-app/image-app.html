@@ -1,0 +1,7 @@
+<section>
+  <label>View:</label>
+  <select ng-model="app.viewName" ng-options="view for view in app.views" ng-change="app.renderView()"></select>
+  <image-short image="app.image" ng-show="app.shortView"></image-short>
+  <image-thumbnail image="app.image" ng-show="app.thumbnailView"></image-thumbnail>
+  <image-full image="app.image" ng-show="app.fullView"></image-full>
+</section>

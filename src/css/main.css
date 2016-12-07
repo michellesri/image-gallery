@@ -1,0 +1,9 @@
+.img-view {
+  border: 1px solid;
+  padding: 5px;
+}
+
+.full-view img {
+  max-width: 800px;
+  width: 100%
+}
