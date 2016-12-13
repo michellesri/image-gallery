@@ -1,12 +1,12 @@
 @import 'colors';
 
-$max-width: 600px;
+$max-width: 70%;
 
 .full-view {
   background: gray;
-  border: 1px solid;
-  padding: 10px;
-  margin: 10px;
+  border: 1% solid;
+  padding: 1%;
+  margin: 1%;
   background: $bg-color-full;
   vertical-align: top;
   max-width: $max-width;

@@ -1,10 +1,12 @@
 @import 'colors';
 
+$max-width: 70%;
+
 .short-view {
   background: gray;
-  border: 1px solid;
-  padding: 10px;
-  margin: 10px;
+  border: 1% solid;
+  padding: 1%;
+  margin: 1%;
   background: $bg-color-short;
   vertical-align: top;
 }

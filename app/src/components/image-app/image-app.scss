@@ -4,13 +4,13 @@
   background-color: #c91c1c;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 2% 5%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   font-family: 'VT323', monospace;
-  margin: 4px 2px;
+  margin: 2% 2%;
   cursor: pointer;
 
     &:hover{
@@ -19,20 +19,20 @@
   }
 
 :local(.selector){
-  width: 100px;
-  height: 20px;
-  border: 1px solid black;
+  width: 20%;
+  height: 20%;
+  border: .5% solid black;
   select {
     -webkit-appearance: none;
     background: transparent;
-    width: 240px;
-    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 10%;
+    padding: 1%; /* If you add too much padding here, the options won't show in IE */
     font-size: 16px;
-    line-height: 1;
+    line-height: .5%;
     border: none;
-    height: 29px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    height: 15%;
+    -webkit-border-radius: 1%;
+    -moz-border-radius: 1%;
+    border-radius: 1%;
   }
 }
