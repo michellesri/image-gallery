@@ -1,0 +1,13 @@
+@import 'colors';
+
+$max-width: 600px;
+
+.full-view {
+  background: gray;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  background: $bg-color-full;
+  vertical-align: top;
+  max-width: $max-width;
+}

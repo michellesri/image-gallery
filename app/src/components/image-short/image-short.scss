@@ -1,0 +1,10 @@
+@import 'colors';
+
+.short-view {
+  background: gray;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  background: $bg-color-short;
+  vertical-align: top;
+}

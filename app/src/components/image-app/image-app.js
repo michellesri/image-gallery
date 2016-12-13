@@ -1,4 +1,5 @@
 import template from './image-app.html';
+import styles from './image-app.scss';
 
 export default {
   template,
@@ -10,6 +11,7 @@ controller.$inject = ['imageService'];
 
 function controller(images){
 
+  this.styles = styles;
   this.loading = true;
 
   images.get()
@@ -48,16 +50,3 @@ function controller(images){
   this.renderView();
 
 }
-
-// function controller(){
-//
-//   this.image = {
-//     title: 'Calico Bunny',
-//     link: 'http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg',
-//     description: 'A cute bunny with orange, brown, grey, and black colors'
-//   };
-//
-//
-//
-//
-// }

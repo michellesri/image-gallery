@@ -1,0 +1,11 @@
+@import 'colors';
+
+.thumbnail-view {
+  background: gray;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  background: $bg-color-thumbnail;
+  vertical-align: top;
+  display: inline-block;
+}
