@@ -14,6 +14,7 @@ function controller(images){
 
   images.get()
     .then(images => {
+      console.log('images: ', images[0]);
       this.loading = false;
       this.images = images;
     });

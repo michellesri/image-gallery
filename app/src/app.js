@@ -8,6 +8,11 @@ const app = angular.module('myApp', [components, services]);
 const dev = 'http://localhost:3000/api';
 
 // .value gives the service 'object' directly to angular
+// .value defines apiUrl as constant and sets dev as value.
 app.value('apiUrl', dev);
 
-app.factory('apiUrl', function() { return dev; });
+// register factory with module called app
+  // when we use factory, we give it a name
+      // and a function that returns something
+
+// app.factory('apiUrl', function() { return dev; });

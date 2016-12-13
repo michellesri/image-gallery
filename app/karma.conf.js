@@ -4,8 +4,7 @@ webpackConfig.entry = {};
 module.exports = function(config){
   config.set({
 
-    //TODO: not sure what this is
-    basePath: '',
+    basePath: '', //if you have karma.conf file not in the root, need to establish where is the path
 
     //frameworks
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -25,17 +24,17 @@ module.exports = function(config){
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       './src/app.js': [ 'webpack' ],
-      './test/**/*.js': [ 'babel ']
+      './test/**/*.js': [ 'babel']
     },
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [ 'Chrome', 'Safari' ],
+    browsers: [ 'Chrome' ],
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: [ 'spec' ],
+    reporters: [ 'spec' ], // describe how error info is displayed in terminal
 
     // web server port
     port: 9876,
