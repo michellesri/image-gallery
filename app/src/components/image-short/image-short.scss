@@ -1,6 +1,5 @@
 @import 'colors';
-
-$max-width: 70%;
+@import 'max-width';
 
 .short-view {
   background: gray;
@@ -9,4 +8,5 @@ $max-width: 70%;
   margin: 1%;
   background: $bg-color-short;
   vertical-align: top;
+  max-width: $max-width;
 }

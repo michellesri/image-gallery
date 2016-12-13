@@ -1,25 +1,27 @@
 @import 'colors';
 @import 'hover';
+@import 'max-width';
 
 :local(.new-image) {
-  border: 1px solid black;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
+  border: 1% solid black;
+  padding: 2%;
+  margin: 1%;
+  border-radius: 1%;
   background: $bg-color-newimage;
+  max-width: $max-width;
 }
 
 :local(.addImageBtn) {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 2%px 2%px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   font-family: 'VT323', monospace;
-  margin: 4px 2px;
+  margin: 2% 2%;
   cursor: pointer;
     &:hover{
       @include hover-shadow();
