@@ -15,7 +15,7 @@ if(process.env.NODE_ENV === 'production'){
 }
 
 app.use((req, res, next) => {
-  console.log('setting cors headers');
+  // console.log('setting cors headers');
   const url = '*';
   res.header('Access-Control-Allow-Origin', url);
   res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT, DELETE');

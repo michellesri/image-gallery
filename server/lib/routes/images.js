@@ -6,12 +6,18 @@ const Image = require('../models/image');
 router
   .get('/', (req, res, next) => {
     const query = {};
-
+    console.log('in get all');
     Image.find(query)
       .select('title description link')
       .lean()
-      .then(images => res.send(images))
-      .catch(next);
+      .then(images => {
+        console.log('in then for get all');
+        res.send(images);
+      })
+      .catch(err => {
+        console.log('in error for get all');
+        next(err);
+      });
   })
 
   .get('/:id', (req, res, next) => {
@@ -29,8 +35,9 @@ router
   })
 
   .post('/', bodyParser, (req, res, next) => {
-    Image.findByIdAndUpdate(req.params.id, req.body)
-      .them(saved => res.send(saved))
+    new Image(req.body)
+      .save()
+      .then(saved => res.send(saved))
       .catch(next);
   });
 
