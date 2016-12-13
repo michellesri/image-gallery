@@ -6,16 +6,13 @@ const Image = require('../models/image');
 router
   .get('/', (req, res, next) => {
     const query = {};
-    console.log('in get all');
     Image.find(query)
       .select('title description link')
       .lean()
       .then(images => {
-        console.log('in then for get all');
         res.send(images);
       })
       .catch(err => {
-        console.log('in error for get all');
         next(err);
       });
   })
