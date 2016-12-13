@@ -1,3 +1,5 @@
+@import 'hover';
+
 :local(.delete-btn){
   background-color: #c91c1c;
   border: none;
@@ -11,29 +13,26 @@
   margin: 4px 2px;
   cursor: pointer;
 
-  // TODO: get nesting hover to work
-  :hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-
+    &:hover{
+      @include hover-shadow();
+    }
   }
-}
 
 :local(.selector){
   width: 100px;
   height: 20px;
   border: 1px solid black;
-}
-
-:local(.selector) select {
-  -webkit-appearance: none;
-background: transparent;
-width: 240px;
-padding: 5px; /* If you add too much padding here, the options won't show in IE */
-font-size: 16px;
-line-height: 1;
-border: none;
-height: 29px;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+  select {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 240px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    font-size: 16px;
+    line-height: 1;
+    border: none;
+    height: 29px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
 }
