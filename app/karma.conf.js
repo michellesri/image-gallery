@@ -59,7 +59,7 @@ module.exports = function(config){
 
   });
 };
-
+// ------------------------------------------------------------------------------------
 // if i wanted to make autowatch true and singlerun false
   // and still have travis pass (travis was hanging before)
   //
