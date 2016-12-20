@@ -19,6 +19,15 @@ function controller(albums){
   this.setCurrent = albumName => {
     this.currentAlbum = albumName;
   };
+
+  this.add = album => {
+    this.loading = true;
+    albums.add(album)
+        .then(savedAlbum => {
+          this.loading = false;
+          this.myAlbums.push(savedAlbum);
+        });
+  };
 }
 
 // album button
