@@ -1,3 +1,5 @@
+@import 'hover';
+
 a {
     color: steelblue;
 }
@@ -7,6 +9,18 @@ a.blah {
     color: white;
 }
 
+
+.header-link{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  &:hover{
+    @include hover-shadow();
+
+  }
+}
+
 .foo {
-  background-color: black;
+  text-decoration: underline;
+  color: black;
 }

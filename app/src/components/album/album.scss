@@ -1,0 +1,11 @@
+.albumSection {
+  width: 2em;
+  background-color: red;
+  display: inline-block;
+  border: 1px grey solid;
+
+  .albumSectionActive {
+    background-color: blue;
+    color: white;
+  }
+}

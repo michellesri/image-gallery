@@ -26,6 +26,12 @@ describe('image service', () => {
     $httpBackend.verifyNoOutstandingRequest();
   });
 
+  const image = {
+    title: 'testImage',
+    link: 'http://www.testImage.com',
+    description: 'image for testing purposes'
+  };
+
   it('get images', done => {
       // mock returns data from images get
     const images = [1,2,3];
@@ -45,7 +51,7 @@ describe('image service', () => {
     $httpBackend.flush(); //if the test fails, reset httpBackend so that another test can start.
   });
 
-  it('add image', done => {
+  it('adds image', done => {
     const image = {
       title: 'Calico Bunny',
       link: 'http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg',
@@ -64,5 +70,23 @@ describe('image service', () => {
           .catch(done);
 
     $httpBackend.flush();
+  });
+
+  it('removes image', done => {
+
+    $httpBackend
+      .expectDELETE('/api/images/1')
+      .respond(image);
+
+    imageService
+        .remove(1)
+        .then((deletedImage) => {
+          assert.deepEqual(deletedImage, image);
+          done();
+        })
+        .catch(done);
+
+    $httpBackend.flush();
+
   });
 });

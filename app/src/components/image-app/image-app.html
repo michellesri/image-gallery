@@ -1,9 +1,16 @@
 <section>
 <div id="view-wrapper">
     <label>View:</label>
-    <select ng-class="app.styles['selector']" ng-model="app.viewName" ng-options="view for view in app.views" ng-change="app.renderView()"></select>
+    <select
+    ng-class="app.styles['selector']"
+    ng-model="app.viewName"
+    ng-options="view for view in app.views"
+    ng-change="app.renderView()">
+    </select>
 </div>
-  <div ng-repeat="image in app.images" ng-hide"app.loading" ng-class="{'thumbnail-view': app.thumbnailView, 'short-view': app.shortView, 'full-view': app.fullView}">
+  <div ng-repeat="image in app.images"
+   ng-hide"app.loading"
+   ng-class="{'thumbnail-view': app.thumbnailView, 'short-view': app.shortView, 'full-view': app.fullView}">
     <hr>
     <image-short image="image" ng-show="app.shortView"></image-short>
     <image-thumbnail image="image" ng-show="app.thumbnailView"></image-thumbnail>

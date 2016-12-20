@@ -80,5 +80,20 @@ describe('images component', () => {
         done();
       });
     });
+
+    it('removes an image', done => {
+      const component = $component('images', { imageService });
+      image._id = 1;
+      component.remove(image);
+      assert.isOk(component.loading);
+
+      setTimeout(() => {
+        assert.equal(images.length, 2);
+        assert.deepEqual(component.images, images);
+        assert.isNotOk(component.loading);
+        done();
+      });
+    });
+
   });
 });
