@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/app.js',
   output: {
-    path: '../server/build',
-    filename: 'app.js'
+    path: '../server/public',
+    filename: 'main.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -28,11 +28,17 @@ module.exports = {
         presets: ['es2015']
       }
     }, {
-      test: /\.css/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      test: /\.scss/,
+      loader: ExtractTextPlugin.extract(
+        'style-loader',
+        'css-loader?sourceMap!sass-loader?sourceMap'
+      )
     }, {
       test: /\.html$/,
       loader: 'html-loader'
     }]
+  },
+  sassLoader: {
+    includePaths: ['./src/scss/partials']
   }
 };

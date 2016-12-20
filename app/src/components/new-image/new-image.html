@@ -1,0 +1,17 @@
+<section ng-class="$ctrl.styles['new-image']">
+  <table>
+  <tr>
+    <td><label>Title:</label></td>
+    <td><input ng-model="$ctrl.title"></td>
+  </tr>
+  <tr>
+    <td><label>Link:</label></td>
+    <td><input ng-model="$ctrl.link"></td>
+  </tr>
+  <tr>
+    <td><label>Description:</label></td>
+    <td><input ng-model="$ctrl.description"></td>
+  </tr>
+  </table>
+  <button ng-class="$ctrl.styles['addImageBtn']" ng-click="$ctrl.addImage()">Add</button>
+</section>

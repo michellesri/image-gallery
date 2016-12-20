@@ -1,0 +1,12 @@
+@import 'colors';
+@import 'max-width';
+
+.short-view {
+  background: gray;
+  border: 1% solid;
+  padding: 1%;
+  margin: 1%;
+  background: $bg-color-short;
+  vertical-align: top;
+  max-width: $max-width;
+}

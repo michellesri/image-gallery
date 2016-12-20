@@ -1,0 +1,16 @@
+@import 'colors';
+@import 'max-width';
+
+$max-width: 70%;
+
+.thumbnail-view {
+  background: gray;
+  border: 1% solid;
+  padding: 1%;
+  margin: 1%;
+  background: $bg-color-thumbnail;
+  vertical-align: top;
+  display: block;
+  max-width: $max-width;
+
+}
