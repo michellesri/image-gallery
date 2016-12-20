@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "MONGODB_URI=mongodb://localhost/images-test mocha"
+    "test": "MONGODB_URI=mongodb://localhost/images-test mocha",
+    "start": "node index.js"
   },
   "author": "Michelle Sri",
   "license": "ISC",
