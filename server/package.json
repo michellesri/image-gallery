@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "MONGODB_URI=mongodb://localhost/images-test mocha",
+    "start": "node index.js"
+  },
+  "author": "Michelle Sri",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "debug": "^2.3.3",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.2",
+    "morgan": "^1.7.0"
+  }
+}
