@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "cd app && npm i && npm test && cd ../server && npm i && npm test",
 
     "build": "webpack",
@@ -15,10 +14,6 @@
       "es2015"
     ]
   },
-=======
-    "test": "cd app && npm i && npm test && cd ../server && npm i && npm test"
-},
->>>>>>> a29df2f4fc4474c745a82351a4cc7688049a2170
   "repository": {
     "type": "git",
     "url": "git+https://github.com/michellesri/image-gallery.git"
@@ -28,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/michellesri/image-gallery/issues"
   },
-<<<<<<< HEAD
   "homepage": "https://github.com/michellesri/image-gallery#readme",
   "devDependencies": {
     "babel": "^6.5.2",
@@ -58,7 +52,5 @@
   "dependencies": {
     "angular": "^1.5.9"
   }
-=======
-  "homepage": "https://github.com/michellesri/image-gallery#readme"
->>>>>>> a29df2f4fc4474c745a82351a4cc7688049a2170
+
 }
