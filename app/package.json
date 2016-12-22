@@ -8,7 +8,8 @@
     "build": "webpack",
     "start": "webpack-dev-server --port 8080 --inline",
     "update-webdriver": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "e2e-explore": "protractor --elementExplorer"
   },
   "babel": {
     "presets": [
@@ -38,6 +39,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
+    "jasmine": "^2.5.2",
     "karma": "^1.3.0",
     "karma-babel-preprocessor": "^6.0.1",
     "karma-chai": "^0.1.0",
