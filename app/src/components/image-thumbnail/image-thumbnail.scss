@@ -1,7 +1,6 @@
 @import 'colors';
 @import 'max-width';
 
-$max-width: 70%;
 
 .thumbnail-view {
   background: gray;
@@ -12,5 +11,7 @@ $max-width: 70%;
   vertical-align: top;
   display: block;
   max-width: $max-width;
+  height: 2%;
+
 
 }

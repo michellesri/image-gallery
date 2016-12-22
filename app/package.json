@@ -2,7 +2,7 @@
   "name": "image-gallery",
   "version": "1.0.0",
   "description": "",
-  "main": "bunnyGallery.js",
+  "main": "app.js",
   "scripts": {
     "test": "karma start",
     "build": "webpack",
@@ -50,6 +50,8 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "angular": "^1.5.9"
+    "angular": "^1.5.9",
+    "angular-ui-router": "^1.0.0-beta.3"
+
   }
 }

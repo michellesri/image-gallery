@@ -1,10 +1,11 @@
-.full-view img {
-  max-width: 50%;
-  width: 100%
-}
 
 .img-view {
   max-width: 90%;
+}
+
+.full-view img {
+  max-width: 50%;
+  width: 100%
 }
 
 #view-wrapper {
@@ -20,4 +21,5 @@ body {
 
 h1 {
   color: black;
+  text-align: center;
 }
