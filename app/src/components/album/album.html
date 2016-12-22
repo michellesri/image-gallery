@@ -1,13 +1,14 @@
 
 <h3>Albums</h3>
 <div id="select-view">
-  <a class="albumSection"
-  ng-click="albumCtrl.setCurrent(album.name)"
-  ui-sref="albums.images({ album_id: album._id, album: albumCtrl.myAlbums })"
-  ui-sref-active="albumSectionActive"
-  ng-repeat="album in albumCtrl.myAlbums">
-  {{ album.name }}
-</a>
+  <!-- ng-click="albumCtrl.setCurrent(album.name)" -->
+  <div class="albumSection" ng-repeat="album in albumCtrl.myAlbums">
+    <a ui-sref="albums.images({ album_id: album._id })"
+      ui-sref-active="albumSectionActive">
+      {{ album.name }}
+    </a>
+    <button ng-class="albumCtrl.styles['delete-btn']" ng-click="albumCtrl.remove(album)">Delete</button>
+  </div>
 </div>
 
 <h3>Current Album: {{ albumCtrl.currentAlbum }}</h3>

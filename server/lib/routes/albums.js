@@ -42,7 +42,8 @@ albums
       .catch(next);
   })
 
-  .delete(':/id', (req, res, next) => {
+  .delete('/:id', (req, res, next) => {
+    console.log('delete in albums called');
     Album.findByIdAndRemove(req.params.id)
       .then(deletedAlbum => res.send(deletedAlbum))
       .catch(next);

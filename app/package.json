@@ -6,7 +6,9 @@
   "scripts": {
     "test": "karma start",
     "build": "webpack",
-    "start": "webpack-dev-server --port 8080 --inline"
+    "start": "webpack-dev-server --port 8080 --inline",
+    "update-webdriver": "webdriver-manager update",
+    "e2e": "protractor"
   },
   "babel": {
     "presets": [
@@ -46,6 +48,7 @@
     "karma-webpack": "^1.8.0",
     "mocha": "^3.2.0",
     "node-sass": "^4.1.0",
+    "protractor": "^4.0.13",
     "sass-loader": "^4.1.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",

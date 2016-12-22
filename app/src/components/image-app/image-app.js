@@ -5,7 +5,6 @@ export default {
   template,
   bindings: {
     albumId: '<'
-    // myAlbums: '='
   },
   controller,
   controllerAs: 'app'
@@ -18,7 +17,7 @@ function controller(images, albums){
     this.styles = styles;
     this.loading = true;
     this.views = ['short', 'thumbnail', 'full', 'all' ];
-    this.viewName = 'all';
+    this.viewName = 'thumbnail';
 
     if(this.albumId){ //checks if albumId binding exists
       albums.getImages(this.albumId)
@@ -34,6 +33,8 @@ function controller(images, albums){
         this.images = images;
       });
     }
+    this.renderView();
+
   };
 
 
@@ -73,6 +74,5 @@ function controller(images, albums){
     this.fullView = (this.viewName === 'full' || this.viewName === 'all');
     this.thumbnailView = (this.viewName === 'thumbnail' || this.viewName === 'all');
   };
-  this.renderView();
 
 }
