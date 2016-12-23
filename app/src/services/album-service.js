@@ -13,10 +13,8 @@ export default function albumService($http, apiUrl){
     },
 
     remove(id){
-      console.log('remove in service getting called');
       return $http.delete(`${apiUrl}/albums/${id}`)
         .then(res => {
-          console.log('then in remove getting called');
           res.data;
 
         });

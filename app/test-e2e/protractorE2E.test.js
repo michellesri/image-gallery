@@ -7,7 +7,6 @@ describe('image gallery', function(){
 
 
   it('has the correct title', function(){
-    browser.get('/');
     expect(browser.getTitle()).toEqual('Michelle\'s Image Gallery');
   });
 
@@ -28,7 +27,7 @@ describe('image gallery', function(){
 
       albumGallery.click();
 
-      testState('/images', 'images');
+      testState('/images', 'image-app');
 
     });
 

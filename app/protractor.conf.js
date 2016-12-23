@@ -20,7 +20,7 @@ exports.config = {
   // leave this out and protractor will start a server for us
   // seleniumAddress: 'http://localhost:4444/wd/hub',
 
-  baseUrl: 'http://localhost8080',
+  baseUrl: 'http://localhost:8080',
 
   framework: 'jasmine'
 };
