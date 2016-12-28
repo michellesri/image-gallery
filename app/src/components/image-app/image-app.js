@@ -4,7 +4,7 @@ import styles from './image-app.scss';
 export default {
   template,
   bindings: {
-    albumId: '<'
+    albumId: '='
   },
   controller,
   controllerAs: 'app'
