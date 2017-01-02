@@ -1,0 +1,158 @@
+.img-view {
+  max-width: 90%; }
+
+.full-view img {
+  max-width: 50%;
+  width: 100%; }
+
+#view-wrapper {
+  padding: 2%;
+  margin: 2%; }
+
+body {
+  font-family: "Andale Mono", "Monaco", monospace;
+  color: white;
+  background-color: grey; }
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: "Andale Mono", "Monaco", monospace; }
+.albumSection {
+  width: 70px;
+  background-color: lightgrey;
+  display: block;
+  padding: 10px 70px 0px 70px;
+  border: 1px black solid;
+  height: 70px;
+  text-align: center;
+  margin-top: 10px; }
+  .albumSection .albumSectionActive {
+    background-color: blue;
+    color: white; }
+a {
+  color: steelblue; }
+
+a.blah {
+  background: steelblue;
+  color: white; }
+
+.header-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: black; }
+  .header-link:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+
+.foo {
+  text-decoration: underline;
+  color: black; }
+._1ynDrhi8vML0QiPs7lLgWM {
+  background-color: #c91c1c;
+  border: none;
+  color: white;
+  padding: 2% 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'VT323', monospace;
+  margin: 2% 2%;
+  cursor: pointer; }
+  ._1ynDrhi8vML0QiPs7lLgWM:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+
+._2-8wT8zKD67T9e7sKFt5hN {
+  width: 20%;
+  height: 20%;
+  border: .5% solid black; }
+  ._2-8wT8zKD67T9e7sKFt5hN select {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 10%;
+    padding: 1%;
+    /* If you add too much padding here, the options won't show in IE */
+    font-size: 16px;
+    line-height: .5%;
+    border: none;
+    height: 15%;
+    -webkit-border-radius: 1%;
+    -moz-border-radius: 1%;
+    border-radius: 1%; }
+.full-view {
+  background: gray;
+  border: 1% solid;
+  padding: 1%;
+  margin: 1%;
+  background: lightgrey;
+  vertical-align: top;
+  max-width: 70%; }
+.short-view {
+  background: gray;
+  border: 1% solid;
+  padding: 1%;
+  margin: 1%;
+  background: lightgrey;
+  vertical-align: top;
+  max-width: 70%; }
+
+.img-description {
+  overflow: hidden; }
+.thumbnail-view {
+  background: gray;
+  border: 1% solid;
+  padding: 1%;
+  margin: 1%;
+  background: lightgrey;
+  vertical-align: top;
+  display: block;
+  max-width: 70%;
+  height: 2%; }
+._19qbop9eLYYsjHChfuSUwk {
+  border: 1% solid black;
+  padding: 2%;
+  margin: 1%;
+  border-radius: 1%;
+  background: lightgrey;
+  max-width: 70%; }
+
+._3uHF-Jnt7mBO2xCrX1R7tX {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 2% px 2% px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'VT323', monospace;
+  margin: 2% 2%;
+  cursor: pointer; }
+  ._3uHF-Jnt7mBO2xCrX1R7tX:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+._1X7MnkLD5WTlhk_X6J5H8W {
+  border: 1% solid black;
+  padding: 2%;
+  margin: 1%;
+  border-radius: 1%;
+  background: lightgrey;
+  max-width: 70%; }
+
+._2UqdRU5DEYxiDMYKgB6LZM {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 2% px 2% px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'VT323', monospace;
+  margin: 2% 2%;
+  cursor: pointer; }
+  ._2UqdRU5DEYxiDMYKgB6LZM:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+
+/*# sourceMappingURL=main.css.map*/

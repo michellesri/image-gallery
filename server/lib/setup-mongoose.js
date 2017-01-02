@@ -3,7 +3,7 @@ const mongoose = require( 'mongoose' );
 // we need a URI that points to our database
 const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/images';
 
-mongoose.Promise = Promise;
+mongoose.Promise = Promise; //use my own promises instead of mogoose's promises.
 mongoose.connect( dbURI );
 
 // CONNECTION EVENTS
