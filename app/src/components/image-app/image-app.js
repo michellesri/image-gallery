@@ -13,9 +13,9 @@ export default {
 controller.$inject = ['imageService', 'albumService'];
 
 function controller(images, albums){
+  this.loading = true;
   this.$onInit = () => { //executes function using the binding. can't use albumId without this line
     this.styles = styles;
-    this.loading = true;
     this.views = ['short', 'thumbnail', 'full', 'all' ];
     this.viewName = 'thumbnail';
 
