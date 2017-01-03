@@ -40,7 +40,6 @@ function controller(images, albums){
 
   this.remove = image => {
     this.loading = true;
-    console.log('image._id: ', image._id);
     images.remove(image._id)
         .then(() => {
           this.loading = false;
