@@ -40,11 +40,18 @@ function controller(images, albums){
 
   this.remove = image => {
     this.loading = true;
+    console.log('image._id: ', image._id);
     images.remove(image._id)
         .then(() => {
           this.loading = false;
-          const index = this.images.indexOf(image);
-          if (index > -1) this.images.splice(index, 1);
+          for(var i = 0; i < this.images.length; i++){
+            if(this.images[i]._id == image._id){
+              this.images.splice(i, 1);
+            }
+          }
+        })
+        .catch(err => {
+          console.log(err);
         });
   };
 

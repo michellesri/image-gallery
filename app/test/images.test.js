@@ -18,7 +18,7 @@ describe('images component', () => {
   let $component = null;
 
 // allows $component to be used as a method to take our individual components
-// angular give me the thing that angular uses to make components.
+// angular give me the method that will let me call an individual component and mock it for testing.
   before(angular.mock.inject($componentController => {
     $component = $componentController;
   }));
@@ -61,14 +61,8 @@ describe('images component', () => {
       },
 
       remove(image_id){
-        image._id = image_id;
-        let newImages = [];
-        images.forEach((i) => {
-          if(i._id != image_id){
-            newImages.push(i);
-          }
-        });
-        images = newImages;
+        assert.isOk(image_id); //when imageService.remove (angular mocks for test) is called by my imageApp component, assert that i'm getting something.
+        assert.equal(image_id, 123); //is imageService.remove getting the id for the test image.
         return Promise.resolve();
       }
     };
@@ -103,7 +97,8 @@ describe('images component', () => {
       assert.isOk(component.loading);
 
       setTimeout(() => {
-        assert.equal(component.images, images);
+        assert.deepEqual(component.images, images);
+
         assert.isNotOk(component.loading);
         done();
       });
@@ -120,15 +115,13 @@ describe('images component', () => {
     });
 
     it('removes an image', done => {
-      const component = $component('imageApp', { imageService, albumService });
-      image._id = 1;
+      //const component = $component('imageApp', { imageService, albumService });
       component.remove(image);
       assert.isOk(component.loading);
 
-      setTimeout(() => {
-        assert.equal(images.length, 2);
-        assert.deepEqual(component.images, images);
+      setTimeout(() => { //wait 0 miliseconds so that immediate flow of javascript so that things waiting in the resolved async cache can get executed.
         assert.isNotOk(component.loading);
+        assert.equal(component.images.length, 2);
         done();
       });
     });
