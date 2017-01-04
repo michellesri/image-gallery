@@ -59,7 +59,7 @@ describe('images component', () => {
         image._id = _id;
         return Promise.resolve(image);
       },
-
+      
       remove(image_id){
         assert.isOk(image_id); //when imageService.remove (angular mocks for test) is called by my imageApp component, assert that i'm getting something.
         assert.equal(image_id, 123); //is imageService.remove getting the id for the test image.
