@@ -14,6 +14,11 @@ const schema = new Schema({
 
   link: {
     type: String
+  },
+
+  album: {
+    type: Schema.Types.ObjectId,
+    ref: 'Album'
   }
 });
 

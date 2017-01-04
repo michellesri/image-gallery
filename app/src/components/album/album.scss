@@ -1,0 +1,15 @@
+.albumSection {
+  width: 70px;
+  background-color: lightgrey;
+  display: block;
+  padding: 10px 70px 0px 70px;
+  border: 1px black solid;
+  height: 70px;
+  text-align: center;
+  margin-top: 10px;
+
+  .albumSectionActive {
+    background-color: blue;
+    color: white;
+  }
+}

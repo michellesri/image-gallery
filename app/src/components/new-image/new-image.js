@@ -9,8 +9,16 @@ export default {
   controller
 };
 
-function controller(){
+controller.$inject = ['albumService'];
+
+function controller(albums){
   this.styles = styles;
+  this.albumName = '';
+
+  albums.get()
+    .then(returnedAlbums => {
+      this.myAlbums = returnedAlbums;
+    });
 
   this.reset = () => {
     this.title = '';
@@ -24,7 +32,8 @@ function controller(){
     this.add({
       title: this.title,
       description: this.description,
-      link: this.link
+      link: this.link,
+      album: this.albumName._id
     });
     this.reset();
   };

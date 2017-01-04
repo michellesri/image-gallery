@@ -14,6 +14,24 @@ export default function routes($stateProvider, $urlRouterProvider){
   });
 
   $stateProvider.state({
+    name: 'albums',
+    url: '/albums',
+    component: 'album'
+  });
+
+  $stateProvider.state({
+    name: 'albums.images',
+    url: '/:album_id',
+    resolve: { // angular ui router way of putting values on binding properties
+      albumId: [ '$transition$', t => { //imageApp has a binding called albumID. $transition$ lets you have access to params
+        // console.log('album_id: ', t.params().album_id);
+        return t.params().album_id; //assign this value to the binding.
+      }]
+    },
+    component: 'imageApp'
+  });
+
+  $stateProvider.state({
     name: 'about',
     url: '/about',
     component: 'about'

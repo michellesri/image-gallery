@@ -1,0 +1,13 @@
+<section ng-class="$ctrl.styles['new-album']">
+  <table>
+  <tr>
+    <td><label>Name:</label></td>
+    <td><input ng-model="$ctrl.name"></td>
+  </tr>
+  <tr>
+    <td><label>Description:</label></td>
+    <td><input ng-model="$ctrl.description"></td>
+  </tr>
+  </table>
+  <button ng-class="$ctrl.styles['addAlbumBtn']" ng-click="$ctrl.addAlbum()">Add</button>
+</section>
