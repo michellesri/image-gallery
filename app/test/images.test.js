@@ -52,12 +52,37 @@ describe('images component', () => {
       add(image){
         image._id = _id;
         return Promise.resolve(image);
+      },
+      remove(image_id){
+        assert.isOk(image_id); //when imageService.remove (angular mocks for test) is called by my imageApp component, assert that i'm getting something.
+        assert.equal(image_id, 123); //is imageService.remove getting the id for the test image.
+        return Promise.resolve();
+      }
+    };
+
+    const albums = [
+      {
+        name: 'testAlbum',
+        description: 'test description'
+      }
+    ];
+
+
+    const albumService = {
+      get(){
+        return Promise.resolve(albums);
+      },
+
+      add(album){
+        album._id = _id;
+        return Promise.resolve(album);
       }
     };
 
     let component = null;
     before(() => {
-      component = $component('imageApp', { imageService });
+      component = $component('imageApp', { imageService, albumService });
+      component.$onInit();
 
     });
 
@@ -82,15 +107,13 @@ describe('images component', () => {
     });
 
     it('removes an image', done => {
-      const component = $component('images', { imageService });
-      image._id = 1;
+      //const component = $component('imageApp', { imageService, albumService });
       component.remove(image);
       assert.isOk(component.loading);
 
-      setTimeout(() => {
-        assert.equal(images.length, 2);
-        assert.deepEqual(component.images, images);
+      setTimeout(() => { //wait 0 miliseconds so that immediate flow of javascript so that things waiting in the resolved async cache can get executed.
         assert.isNotOk(component.loading);
+        assert.equal(component.images.length, 2);
         done();
       });
     });
